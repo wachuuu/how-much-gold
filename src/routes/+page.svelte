@@ -1,5 +1,9 @@
-<script>
-	import Counter from './Counter.svelte';
+<script lang="ts">
+	import Calculator from '$lib/components/Calculator.svelte';
+	import Form from '$lib/components/Form.svelte';
+
+	let wage: number | undefined;
+  let period: string | undefined;
 </script>
 
 <svelte:head>
@@ -12,5 +16,6 @@
 		How much gold
 	</h1>
 
-	<Counter />
+	<Form bind:wage bind:period/>
+	<Calculator {wage} {period} />
 </section>
