@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section>
-	<h1 class="text-5xl mt-5 flex justify-center font-bold">
+	<h1>
 		How much gold
 	</h1>
 

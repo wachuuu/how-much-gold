@@ -15,9 +15,9 @@
   }
 </script>
 
-<div class="flex justify-center">
+<div>
   {#if output}
-    <span class="text-3xl">
+    <span>
       { output }
     </span>
   {/if}
