@@ -3,9 +3,9 @@
   export let period: string | undefined;
 </script>
 
-<section class="dark:bg-black p-5">
+<section>
   <form>
-    <input type="text" placeholder="Period of time (HH:mm)" bind:value={period}>
     <input type="number" placeholder="Your wage" bind:value={wage}>
+    <input type="text" placeholder="Period of time (HH:mm)" bind:value={period}>
   </form>
 </section>
