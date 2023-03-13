@@ -1,3 +1,13 @@
 @tailwind base;
+
+@layer base {
+  html {
+    height: 100vh;
+    background-repeat: no-repeat;
+    @apply gradient-mobile;
+    @apply md:gradient-desktop;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;

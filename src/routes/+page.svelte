@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Your flexible salary calculator"/>
 </svelte:head>
 
 <section>
