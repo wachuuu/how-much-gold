@@ -24,7 +24,8 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.secondary'),
+            'max-width': 'none',
+            'color': theme('colors.secondary'),
             '--tw-prose-headings': theme('colors.secondary'),
             '--tw-prose-links': theme('colors.secondary'),
             '--tw-prose-bold': theme('colors.secondary'),
@@ -37,13 +38,20 @@ module.exports = {
     require('@tailwindcss/typography'),
     plugin(function ({ addBase, addComponents, addUtilities, theme }) {
       addBase({
-        'html': { background: theme('colors.primary') },
+        'html': { 'background': theme('colors.primary') },
         'input': {
           'color': theme('colors.secondary'),
           'background': theme('colors.highlight2'),
           'border-radius': theme('borderRadius.full'),
           'padding': theme('spacing.input'),
           'backdrop-filter': 'blur(65px)',
+        },
+        'select': { 
+          'color': theme('colors.secondary'),
+          'background': 'none',
+        },
+        'option': {
+          'color': theme('colors.primary'),
         },
       }),
       addComponents({
@@ -66,7 +74,7 @@ module.exports = {
           radial-gradient(84.12% 84.12% at 90.64% 15.88%, rgba(51, 119, 253, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
           radial-gradient(149.1% 31.84% at -16.79% 51.72%, rgba(211, 111, 195, 0.2) 0%, rgba(191, 58, 154, 0) 100%),
           #160B14;`,
-        }
+        },
       })
     }),
   ],

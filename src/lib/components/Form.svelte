@@ -1,11 +1,11 @@
 <script lang="ts">
-  export let wage: number | undefined;
-  export let period: string | undefined;
+  import { formData } from "$lib/stores/form-data.store";
+  import TimePicker from "./pickers/period/PeriodPicker.svelte";
 </script>
 
-<section>
-  <form>
-    <input type="number" placeholder="Your wage" bind:value={wage}>
-    <input type="text" placeholder="Period of time (HH:mm)" bind:value={period}>
-  </form>
+<section class="p-3">
+  <TimePicker />
+  <pre>
+    {JSON.stringify($formData)}
+  </pre>
 </section>
