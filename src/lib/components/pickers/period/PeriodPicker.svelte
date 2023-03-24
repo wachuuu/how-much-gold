@@ -1,27 +1,14 @@
 <script lang="ts">
+  import { PERIOD_PICKERS } from "$lib/constants/periods.const";
   import type { PeriodFormat } from "$lib/models/period.model";
   import { formData } from "$lib/stores/form-data.store";
   import type { SvelteComponent } from "svelte";
-  import DaysPeriod from "./DaysPeriod.svelte";
-  import HourPeriod from "./HourPeriod.svelte";
-  import HrMinPeriod from "./HrMinPeriod.svelte";
   import PeriodSelect from "./PeriodSelect.svelte";
 
-  interface PeriodComponent {
-    format: PeriodFormat;
-    component: typeof SvelteComponent;
-  }
-
-  const periodComponents: PeriodComponent[] = [
-    { format: 'hours:min', component: HrMinPeriod },
-    { format: 'hours', component: HourPeriod },
-    { format: 'days', component: DaysPeriod },
-  ];
-
-  const avialableFormats: PeriodFormat[] = periodComponents.map(item => item.format);
+  const avialableFormats: PeriodFormat[] = PERIOD_PICKERS.map(item => item.format);
 
   const getComponentByFormat = (format: PeriodFormat): typeof SvelteComponent | undefined => {
-    return periodComponents.find((item) => item.format === format)?.component;
+    return PERIOD_PICKERS.find((item) => item.format === format)?.component;
   };
 
   $: component = getComponentByFormat($formData.period.format);

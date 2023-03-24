@@ -1,8 +1,8 @@
-import type { Period } from "./period.model";
+import type { PeriodData } from "./period.model";
 
 // TODO: add more props
 export interface FormData {
-  period: Period,
+  period: PeriodData,
   // wage: Wage,
   // month: string,
 }
