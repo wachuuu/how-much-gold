@@ -9,7 +9,7 @@
   <div class="my-3">
     <h3 class="my-1">Wage</h3>
     <div class="flex items-baseline">
-      <input id="days" class="box-content	w-[7ch]" type="number" placeholder="Wage" bind:value={$formData.wage.value}>
+      <input class="box-content	w-[7ch]" type="number" placeholder="Wage" bind:value={$formData.wage.value}>
       <div class="ml-auto">
         <ParamSelect bind:current={$formData.wage.currency} options={CURRENCIES} />
         /
