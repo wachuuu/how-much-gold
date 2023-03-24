@@ -49,6 +49,7 @@ module.exports = {
         'select': { 
           'color': theme('colors.secondary'),
           'background': 'none',
+          'text-align': 'end',
         },
         'option': {
           'color': theme('colors.primary'),

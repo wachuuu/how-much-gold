@@ -17,7 +17,7 @@
 <form class="max-w-xl">
   <div class="my-3">
     <h3 class="my-1">Time</h3>
-    <div class="flex align-baseline">
+    <div class="flex items-baseline">
       <svelte:component this={component} bind:units={$formData.period.units} />
       <PeriodSelect bind:format={$formData.period.format} options={avialableFormats} />
     </div>
